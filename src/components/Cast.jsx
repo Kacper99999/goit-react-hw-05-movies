@@ -12,7 +12,6 @@ export const Cast = () =>{
 
     useEffect(()=>{
             axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${api_key}`).then(res => setCast(res.data.cast));
-            console.log(cast)
     },[id]);
 
     return(
