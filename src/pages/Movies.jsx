@@ -5,7 +5,7 @@ import axios from "axios";
 const api_key = "b942b8bf626a04f48b07153a95ee51a0";
 
 
-export const Movies = () => {
+const Movies = () => {
     const [movies , setMovies] = useState([]);
     const [search, setSearch] = useSearchParams();
     const query = search.get("query") || "";
@@ -38,3 +38,5 @@ export const Movies = () => {
         </div>
     );
 };
+
+export default Movies;

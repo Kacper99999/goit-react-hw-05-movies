@@ -6,7 +6,7 @@ import axios from "axios";
 
 const api_key = "b942b8bf626a04f48b07153a95ee51a0";
 
-export const Cast = () =>{
+const Cast = () =>{
     const{id} = useParams();
     const [cast, setCast] = useState([]);
 
@@ -28,3 +28,5 @@ export const Cast = () =>{
         </div>
     )
 }
+
+export default Cast;

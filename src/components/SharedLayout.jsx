@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export const SharedLayout = () => {
+const SharedLayout = () => {
     return(
         <nav>
             <Link to="/" > Home </Link>
@@ -8,3 +8,5 @@ export const SharedLayout = () => {
         </nav>
     )
 }
+
+export default SharedLayout;

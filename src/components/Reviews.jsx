@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const api_key = "b942b8bf626a04f48b07153a95ee51a0";
 
-export const Reviews = () =>{
+const Reviews = () =>{
 
     const [reviews, setReviews] = useState([]);
     const {id} = useParams();
@@ -26,3 +26,5 @@ export const Reviews = () =>{
         </div>
     )
 }
+
+export default Reviews;
