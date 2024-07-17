@@ -1,14 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useParams, Link, Outlet, useNavigate, useLocation, useSearchParams } from "react-router-dom";
+import { useParams, Link, Outlet, useLocation } from "react-router-dom";
 import axios from "axios";
+import "/src/components/Styles.scss";
 
 const api_key = "b942b8bf626a04f48b07153a95ee51a0";
 
-const MovieModal = () => {
+const MovieDetails = () => {
     const {id} = useParams();
     const [movie, setMovie] = useState(null);
-    const navigate = useNavigate();
     const location = useLocation();
     const backLinkHref = location.state?.from ?? "/";
 
@@ -40,6 +40,6 @@ const MovieModal = () => {
       );
 };
 
-export default MovieModal;
+export default MovieDetails;
 
 

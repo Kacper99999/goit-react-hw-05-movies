@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, Link, useSearchParams} from "react-router-dom";
+import {  Link, useSearchParams} from "react-router-dom";
 import axios from "axios";
+import "/src/components/Styles.scss";
 
 const api_key = "b942b8bf626a04f48b07153a95ee51a0";
 
@@ -24,9 +25,9 @@ const Movies = () => {
 
     return (
         <div>
-            <form onSubmit={onSubmit}>
+            <form className="search" onSubmit={onSubmit}>
             <input type="text"/>
-            <input type="submit"/>
+            <input type="submit" value="Search"/>
             </form>
             <ul>
                 {movies.map((movie) => (

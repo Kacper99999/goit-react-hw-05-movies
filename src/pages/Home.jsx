@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import { fetchMoves } from "/src/components/apiTrending";
-
+import "/src/components/Styles.scss";
 
 const Home = () => {
     const [movies, setMovies] = useState([]);

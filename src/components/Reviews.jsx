@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from 'axios';
+import "/src/components/Styles.scss";
 
 const api_key = "b942b8bf626a04f48b07153a95ee51a0";
 
