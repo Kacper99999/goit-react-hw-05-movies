@@ -42,9 +42,9 @@ const Movies = () => {
     );
 };
 
-// Movies.propTypes = {
-//     movies : propTypes.array,
-//     search : propTypes.string
-// }
+Movies.propTypes = {
+    movies : propTypes.array,
+    search : propTypes.string
+}
 
 export default Movies;
