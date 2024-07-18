@@ -13,7 +13,7 @@ const Movies = () => {
 
     useEffect(()=>{
         if(query){
-            axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}`).then((res) => setMovies(res.data.results))
+            axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}`).then((res) => setMovies(res.data.results)).catch(console.error("error"));
         }
     },[query])
 
@@ -29,6 +29,7 @@ const Movies = () => {
             <input type="text"/>
             <input type="submit" value="Search"/>
             </form>
+            {movies.length === 0 && query && ( <h1>No Movies Found</h1>)}
             <ul>
                 {movies.map((movie) => (
                     <li key={movie.id}>

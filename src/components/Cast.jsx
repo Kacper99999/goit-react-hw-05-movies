@@ -11,11 +11,11 @@ const Cast = () =>{
     const [cast, setCast] = useState([]);
 
     useEffect(()=>{
-            axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${api_key}`).then(res => setCast(res.data.cast));
+            axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${api_key}`).then(res => setCast(res.data.cast)).catch(console.error("error"));
     },[id]);
 
     return(
-        <div>
+        <div className="cast">
             <ul>
                 {cast && cast.map(actor => (
                     <li key={actor.id}>

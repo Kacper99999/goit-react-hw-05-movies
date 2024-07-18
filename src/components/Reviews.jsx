@@ -10,10 +10,10 @@ const Reviews = () =>{
     const [reviews, setReviews] = useState([]);
     const {id} = useParams();
     useEffect(() =>{
-        axios.get(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${api_key}`).then(res => setReviews(res.data.results));
+        axios.get(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${api_key}`).then(res => setReviews(res.data.results)).catch(console.error("error"));
     },[id])
     return(
-        <div>
+        <div className="reviews">
             <ul>
                 {reviews.map(rev => (
                     <li key ={rev.id}>

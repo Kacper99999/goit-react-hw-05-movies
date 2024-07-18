@@ -7,7 +7,7 @@ export const fetchMoves = () =>{
     .then(res => {
         const {results} = res.data;
         return results.map(movie => movie);
-    })
+    }).catch(console.error("error"));
 }
 
 
