@@ -28,7 +28,9 @@ const MovieDetails = () => {
             <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="" />
             <div className="movie-text">
               <h1>{movie.title}({movie.release_date.substring(0,4)})</h1>
+              <h2>Overview</h2>
               <p>{movie.overview}</p>
+              <h2>Genres</h2>
               <ul>
               {movie.genres.map((gen) => (
               <li key={gen.id}>{gen.name}</li>
