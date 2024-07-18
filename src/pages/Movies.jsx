@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {  Link, useSearchParams} from "react-router-dom";
 import axios from "axios";
+import propTypes from "prop-types";
 import "/src/components/Styles.scss";
 
 const api_key = "b942b8bf626a04f48b07153a95ee51a0";
@@ -40,5 +41,10 @@ const Movies = () => {
         </div>
     );
 };
+
+Movies.propTypes = {
+    movies : propTypes.array,
+    search : propTypes.string
+}
 
 export default Movies;

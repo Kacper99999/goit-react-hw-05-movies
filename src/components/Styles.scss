@@ -112,6 +112,14 @@ a:hover::after {
 //__________________________________________________________//
 
 
+.div-constainer{
+    display: flex;
+    margin-left: 40px;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
 .movie-details{
     display: flex;
     gap:30px;
@@ -137,12 +145,6 @@ a:hover::after {
     font-size: 20px;
 }
 
-.div-constainer{
-    display: flex;
-    margin-left: 40px;
-    flex-direction: column;
-    gap: 50px;
-}
 
 //__________________________________________________________//
 
@@ -156,10 +158,21 @@ a:hover::after {
     width: 150px;
 }
 
+.cast ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+    gap:25px;
+
+}
+
 .cast li{
-    margin-bottom: 20px;
+    display: block;
+    width: 270px;
     font-size: 20px;
 }
+
+
 
 //__________________________________________________________//
 
