@@ -12,7 +12,7 @@ const Cast = () =>{
     const [cast, setCast] = useState([]);
 
     useEffect(()=>{
-            axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${api_key}`).then(res => setCast(res.data.cast)).catch(console.error("error"));
+            axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${api_key}`).then(res => setCast(res.data.cast)).catch(error => console.error("Error fetching movie:", error));
     },[id]);
 
     return(

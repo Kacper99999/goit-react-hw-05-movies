@@ -14,7 +14,7 @@ const MovieDetails = () => {
     const backLinkHref = location.state?.from ?? "/";
 
     useEffect(()=>{
-        axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}`).then(res => setMovie(res.data)).catch(console.error("error"));
+        axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}`).then(res => setMovie(res.data)).catch(error => console.error("Error fetching movie:", error));
     },[id]);
 
     if(!movie){

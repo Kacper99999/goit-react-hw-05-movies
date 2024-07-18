@@ -14,7 +14,7 @@ const Movies = () => {
 
     useEffect(()=>{
         if(query){
-            axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}`).then((res) => setMovies(res.data.results)).catch(console.error("error"));
+            axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}`).then((res) => setMovies(res.data.results)).catch(error => console.error("Error fetching movie:", error));
         }
     },[query])
 
